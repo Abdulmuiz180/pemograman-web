@@ -1,7 +1,7 @@
 <?php
 define('ROOT_PATH', dirname(__DIR__, 2)); 
 
-.gitignore : .env + helper env() : function loadEnv(string $file): void { 
+function loadEnv(string $file): void { 
     if (!file_exists($file)) return; 
     foreach (file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) { 
         $line = trim($line); 
